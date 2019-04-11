@@ -1,141 +1,93 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport"
-    content="width=device-width,initial-scale=1.0">
-  <title>Vue-POC</title>
-  <!-- JQuery -->
-  <script src="https://code.jquery.com/jquery.min.js"></script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Vue-POC</title>
+    <!-- JQuery -->
+    <script src="https://code.jquery.com/jquery.min.js"></script>
 
-  <!-- Material Design icons -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-    rel="stylesheet">
+    <!-- Material Design icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-  <!-- development version, includes helpful console warnings -->
-  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <!-- development version, includes helpful console warnings -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 
-  <!-- Materializecss -->
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="keskneolek.css" />
+    <script src='keskneolek.js' defer></script>
+  </head>
 
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <body>
 
-  <!-- link rel="stylesheet"
-    type="text/css"
-    href="main.css" /-->
-  <script src='keskneolek.js'
-    defer></script>
-</head>
+    <div style='display: flex; justify-content: space-between;'>
+      <div>Prototüüp veebiraamistiku Vue omaduste uurimiseks</div>
+      <div id='etapp'>
+        Etapp:
+        <code>{{ minuyhisolek.olek.etapp.nimetus }}</code>
+      </div>
+    </div>
 
-<body>
+    <div id='juhtriba' class='konteiner'>
+      <span v-for="toiming in toimingud" @click="teeToiming(toiming)" class='toiming'>
+        {{ toiming.nimetus }} >
+      </span>
+    </div>
 
-  <div id='konteiner'
-    class='container'>
+    <div class='konteiner'>
 
-    <h1>Vue-POC</h1>
-    <p>Prototüüp veebiraamistiku Vue omaduste uurimiseks</p>
+      <div id='lisaKandidaat' class='ala'>
+        <p>Kandidaatide ülesseadmine</p>
 
-    <div class='row'>
+        <form>
+          <label class='mr4'>Eesnimi:
+            <input placeholder="Eesnimi" id="eesnimi" type="text">
+          </label>
+          <br><br>
+          <label>Perekonnanimi:
+            <input id="pnimi" type="text">
+          </label>
+          <br><br>
+          <label class='mr4'>Isikukood:
+            <input id="isikukood" type="number">
+          </label>
+          <br><br>
+          <label>E-post:
+            <input id="epost" type="email">
+          </label>
+        </form>
 
-      <div id='lisaKandidaat'
-        class='col'>
-        <p>Kandidaadi ülesseadmine</p>
-        <!-- Kandidaadi ülesseadmise vorm 
-      Vormi input ja textarea väärtused saab siduda Vue isendi
-      (instance) andmetega (data) direktiivi v-model abil
-      -->
-        <!-- section>
-        <div class="field">
-          <label class="label">Nimi:</label>
-          <div class="control">
-            <input v-model="vorm.name"
-              class="input"
-              type="text"
-              placeholder="sisesta nimi">
-          </div>
-        </div>
-      </section -->
-
-        <div class="row">
-          <form class="col s12">
-            <div class="row">
-              <div class="input-field col s6">
-                <input placeholder="Eesnimi"
-                  id="first_name"
-                  type="text"
-                  class="validate">
-                <label for="first_name">Eesnimi</label>
-              </div>
-              <div class="input-field col s6">
-                <input id="last_name"
-                  type="text"
-                  class="validate">
-                <label for="last_name">Perekonnanimi</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="isikukood"
-                  type="number"
-                  class="validate">
-                <label for="isikukood">Isikukood</label>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <input id="email"
-                  type="email"
-                  class="validate">
-                <label for="email">Email</label>
-              </div>
-            </div>
-          </form>
-        </div>
-
-
-        <p>
-          <a class="btn-floating btn-large grey darken-2"
-            @click='lisaKandidaat'>
-            <i class="material-icons">add_circle_outline</i>
-          </a>
+        <p @click='lisaKandidaat' class='nupp' title='Lisa kandidaat'>
+          <i class='ikoon material-icons'>add</i>
         </p>
+
       </div>
 
-      <div id="kuvaKandidaadid"
-        class='col'>
-        <p>Kuva kandidaadid</p>
+      <div id="kuvaKandidaadid" class='ala'>
+        <p>Kandidaadid</p>
         <ul>
-          <kandidaadi-kirje v-for="item in kandidaadid"
-            v-bind:k="item"
+          <kandidaadi-kirje v-for="item in yhisolek.olek.kandidaadid" v-bind:k="item"
             v-bind:key="item.nr"></kandidaadi-kirje>
         </ul>
-        <p>
-          <a class="btn-floating btn-large grey darken-2"
-            @click='kustutaKandidaadid'>
-            <i class="material-icons">delete_forever</i>
-          </a>
-        </p>
       </div>
 
-      <div id='Haaleta'
-        class="col">
+      <div id='Haaleta' class="ala">
         <p>Hääletamine</p>
-      </div>
 
-      <div id='Tulemused'
-        class="col">
-        <p>Tulemus</p>
+        <form>
+          <label>Nr:
+            <input id="haaletatudKandidaadiNr" type="number">
+          </label>
+          <br><br>
+          <p @click='SalvestaHaal' class='nupp' title='Anna hääl'>
+            <i class='ikoon material-icons'>done</i>
+          </p>
+
+        </form>
       </div>
 
     </div>
 
-
-  </div>
-
-</body>
+  </body>
 
 </html>
