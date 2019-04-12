@@ -54,8 +54,8 @@ Vue ümbruse (*ecosystem*) moodustavad rida lisavõimalusi, sh:
 
 - ühefailikomponendid (*single fail components*)
 - Vue CLI (“standard tooling for Vue.js development”). "Tasuta" tuleb kaasa rida vahendeid, nt:
-- pakendamissüsteem Webpack ("bundle your assets")
-- multikompilaator Babel ("Use next generation JavaScript, today.")
+  - pakendamissüsteem Webpack ("bundle your assets")
+  - multikompilaator Babel ("Use next generation JavaScript, today.")
 - silumisvahend Vue.js devtools ("Chrome devtools extension for debugging Vue.js applications")
 - Vue Router ("the official router for Vue.js")
 - Vuex ("a state management pattern + library for Vue.js applications") 
