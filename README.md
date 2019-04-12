@@ -107,6 +107,6 @@ Tehnoloogiaportfelli vaade. ThoughtWorks mudel ADOPT-TRIAL-ASSESS-HOLD. Hindan, 
 
 Ülejäänud - HOLD.
 
-Kood: https://github.com/e-gov/Vue-POC (seal pole midagi erilist)
+Kood: https://github.com/e-gov/Vue-POC
 
 Priit Parmakson, 12.04.2019
