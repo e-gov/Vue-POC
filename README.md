@@ -76,7 +76,7 @@ Vue on rajatud sündmusepõhisusele (*event-driven*). Sündmuse publitseerimine,
 
 Ideoloogia on defineeritav kui koherentne, tugevalt kooskõlaline (oma maailmanägemise piires!) - ja sellisena sageli ka paljudele atraktiivne ideede kogum. Harilikult tuumidee + ümbrus.
 
-Vue-l on ka oma tugev ideoloogia: reageerivus + deklaratiivselt kirjeldatav komponentsus.
+Vue-l on ka oma tugev ideoloogia: reageerivus (*reactivity*) + deklaratiivselt kirjeldatav komponentsus.
 
 Vue tuumikuks on komponentide deklaratiivse kirjeldamise ja reageeriva, sündmustepõhimise sidumise lingvistilised vahendid - komponendi olek (*data*), direktiivid, templiidid, meetodid, omadused (*props*) - ja taustal töötav täitursüsteem (jälgijad (*watchers*)).
 
