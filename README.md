@@ -6,7 +6,7 @@ ja ka mõningane üldistus, sest "uued tehnoloogiad" on sageli vanad ideed uues 
 
 Vue, "the progressive Javascript framework" on tehnoloogia, mis võib abistada sirvikurakenduste (*front-end*) arendamist.
 
-Abivahendid nagu Vue võimaldavad potentsiaalselt sirvikurakendust arendajada kiiremini, vähema koodiga ja veakindlamalt.
+Abivahendid nagu Vue võimaldavad potentsiaalselt sirvikurakendust arendada kiiremini, vähema koodiga ja veakindlamalt.
 
 Kuid see potentsiaal ei teostu iseenesest. Tehnoloogiate nagu Vue kasutamisel tuleb minu arvates arvestada järgmisi tegureid.
 
