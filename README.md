@@ -70,6 +70,8 @@ Teine ettevaatust nõudev lubadus on deklaratiivne arendusstiil. Paljud raamisti
 
 Automaagia peale lootma jäämine võib osutuda piiranguks. Deklaratiivne stiil on kasutusel ka Vues. Veebiliides jagatakse tükkideks. Kuigi internetis on tohutult arvamusi, et kõik see on imelihtne, ei ole arusaamine, kuidas tükid üksteisega suhtlevad, siiski nii lihtne midagi, vaid vajab tugevat jõupingutust. Vue tööpõhimõtte mõistmiseks on vaja aru saada, millistele ideedele on Vue rajatud ja kuidas Vue on ehitatud. Alles siis saab Vued efektiivselt kasutada.
 
+Lihtsat asja saab  muidugi ka deklaratiivse automaagia abil, ilma sügavama mõistmiseta teha.
+
 Vue on rajatud sündmusepõhisusele (*event-driven*). Sündmuse publitseerimine, sündmuse kuulamine ja sellele reageerimine. Reageerivus (*reactivity*). Sündmuste siin (*event bus*). Sündmuste "ajaloo" tagasi- ja edasikerimine (*event sourcing*). Flux ("Application Architecture for Building User Interfaces"). Elm. Keskne olekujuhtimine (*centralized state management*). Kogu selle ideoloogia õppimine ja omaksvõtmine nõuab omajagu aega.
 
 Ideoloogia on defineeritav kui koherentne, tugevalt kooskõlaline (oma maailmanägemise piires!) - ja sellisena sageli ka paljudele atraktiivne ideede kogum. Harilikult tuumidee + ümbrus.
